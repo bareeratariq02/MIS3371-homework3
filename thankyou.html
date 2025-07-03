@@ -1,0 +1,62 @@
+<!--
+Program name: thankyou.html
+Author: Bareera Tariq
+Date created: 06/20/2025
+Version: 1.0
+Description: Thank you page for We Care Clinic patient registration form
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submission Received – We Care Clinic</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="banner">
+      <h1 style="display: flex; align-items: center; gap: 10px;">
+        <img
+          src="81200612-bc42-4564-b5f4-592bed03d4b9.png"
+          alt="We Care Clinic Logo"
+          width="120"
+        />
+        <span>We Care Clinic</span>
+      </h1>
+      <p id="date-display">
+        <script>
+          const today = new Date();
+          const options = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          };
+          document.getElementById("date-display").innerHTML =
+            "Today's Date: " + today.toLocaleDateString("en-US", options);
+        </script>
+      </p>
+    </div>
+
+    <!-- Thank You Message -->
+    <div id="thankyou-form">
+      <h1 style="text-align: center;">Thank you for your submission!</h1>
+      <p style="text-align: center;">
+        A team member from <strong>We Care Clinic</strong> will reach out to you shortly.
+      </p>
+      <p style="text-align: center;">
+        <a href="homework3.html">Return to the form</a>
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>We Care Clinic</p>
+      <p>123 Wellness Drive, Houston, TX 77004</p>
+      <button onclick="alert('Contact us at info@wecareclinic.com');">
+        Contact Us
+      </button>
+    </div>
+  </body>
+</html>
