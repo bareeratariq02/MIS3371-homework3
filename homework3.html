@@ -1,0 +1,68 @@
+<!--
+Program name: homework3.html
+Author: Bareera Tariq
+Date created: 06/20/2025
+Version: 1.0
+Description: We Care Clinic registration form with full JavaScript validation
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 3 – We Care Clinic</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="banner">
+    <h1 style="display: flex; align-items: center; gap: 10px;">
+      <img src="81200612-bc42-4564-b5f4-592bed03d4b9.png" alt="We Care Clinic Logo" width="120" />
+      <span>We Care Clinic</span>
+    </h1>
+    <p id="date-display"></p>
+    <script>
+      const today = new Date();
+      const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+      document.getElementById("date-display").innerHTML =
+        "Today's Date: " + today.toLocaleDateString("en-US", options);
+    </script>
+  </div>
+
+  <div id="main-form">
+    <h2>Patient Registration – Homework 3</h2>
+    <form id="registration-form" onsubmit="return false;">
+      <table class="form-table">
+        <tr>
+          <td><label for="fname">First Name:</label></td>
+          <td>
+            <input type="text" id="fname" name="firstname" title="1–30 letters, apostrophes, or dashes only." />
+            <div class="error-message" id="fname-error"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="lname">Last Name:</label></td>
+          <td>
+            <input type="text" id="lname" name="lastname" title="1–30 letters, apostrophes, or dashes only." />
+            <div class="error-message" id="lname-error"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2" style="text-align:center">
+            <button type="button" onclick="validateForm()">Validate</button>
+            <button type="submit" id="submit-button" style="display:none;" onclick="submitForm()">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>We Care Clinic</p>
+    <p>123 Wellness Drive, Houston, TX 77004</p>
+    <button onclick="alert('Contact us at info@wecareclinic.com');">Contact Us</button>
+  </div>
+</body>
+</html>
